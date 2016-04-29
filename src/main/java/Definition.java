@@ -5,8 +5,8 @@ public class Definition {
   private static ArrayList<Definition> definitionList = new ArrayList<Definition>();
   private Integer mID;
 
-  public Definition(Word userWord) {
-    mDefinition = "";
+  public Definition(String definition) {
+    mDefinition = definition;
     definitionList.add(this);
     mID = definitionList.size();
     // mUserWord = userWord;
@@ -14,5 +14,13 @@ public class Definition {
 
   public static void clear() {
     definitionList.clear();
+  }
+
+  public int getID() {
+    return mID;
+  }
+
+  public String getDefinition() {
+    return mDefinition;
   }
 }
