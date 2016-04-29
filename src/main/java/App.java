@@ -16,8 +16,10 @@ public class App {
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    get("/", (request, response) -> {
+    post("/word-list", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
+      String userWord = request.queryParams("userWord");
+      model.put("userWord", userWord);
       model.put("template", "templates/word-list.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());

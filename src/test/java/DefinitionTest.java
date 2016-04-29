@@ -22,7 +22,14 @@ public class DefinitionTest {
 
   @Test
   public void Definition_getDefinitionReturnsDefinition_String() {
-    Definition myDefinition2 = new Definition("Two");
-    assertEquals("Two", myDefinition2.getDefinition());
+    Definition myDefinition2 = new Definition("Second Def");
+    assertEquals("Second Def", myDefinition2.getDefinition());
+  }
+  @Test
+  public void Definition_getListOfDefinitions_String() {
+    Definition firstDefinition = new Definition ("Def 1");
+    Definition secondDefinition = new Definition ("Def 2");
+    assertTrue(Definition.getListOfDefinitions().contains(firstDefinition));
+    assertTrue(Definition.getListOfDefinitions().contains(secondDefinition));
   }
 }

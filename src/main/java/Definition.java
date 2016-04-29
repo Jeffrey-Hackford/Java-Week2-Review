@@ -23,4 +23,8 @@ public class Definition {
   public String getDefinition() {
     return mDefinition;
   }
+
+  public static ArrayList<Definition> getListOfDefinitions() {
+    return definitionList;
+  }
 }
