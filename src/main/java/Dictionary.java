@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.ArrayList;
 
 
 public class Dictionary {
@@ -14,5 +14,9 @@ public class Dictionary {
 
   public String getUserWord() {
     return mUserWord;
+  }
+
+  public static ArrayList<Dictionary> getListOfWords() {
+    return wordList;
   }
 }

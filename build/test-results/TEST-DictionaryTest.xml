@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="DictionaryTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2016-04-29T15:57:17" hostname="users-MacBook-Pro.local" time="0.003">
+<testsuite name="DictionaryTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2016-04-29T16:24:53" hostname="users-MacBook-Pro.local" time="0.005">
   <properties/>
-  <testcase name="Dictionary_getUserWordReturnsUserWord_String" classname="DictionaryTest" time="0.002"/>
-  <testcase name="Dictionary_instantiatesCorrectly_True" classname="DictionaryTest" time="0.0"/>
+  <testcase name="Dictionary_getUserWordReturnsUserWord_String" classname="DictionaryTest" time="0.003"/>
+  <testcase name="Dictionary_getListOfWords_String" classname="DictionaryTest" time="0.0"/>
+  <testcase name="Dictionary_instantiatesCorrectly_True" classname="DictionaryTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

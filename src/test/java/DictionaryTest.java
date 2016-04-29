@@ -14,4 +14,12 @@ public class DictionaryTest {
     Dictionary myWord = new Dictionary("Two");
     assertEquals("Two", myWord.getUserWord());
   }
+
+  @Test
+  public void Dictionary_getListOfWords_String() {
+    Dictionary firstWord = new Dictionary ("Three");
+    Dictionary secondWord = new Dictionary ("Four");
+    assertTrue(Dictionary.getListOfWords().contains(firstWord));
+    assertTrue(Dictionary.getListOfWords().contains(secondWord));
+  }
 }
