@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Your dictionary contains these words:</h1>
+
+  <ul>
+    #foreach ($Word in $wordList)
+   <li><a href="/Word/$Word.getId()">$Word.getUserWord()</a></li>
+ #end
+  </ul>
+</div>
