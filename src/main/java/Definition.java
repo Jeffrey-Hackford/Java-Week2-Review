@@ -1,15 +1,15 @@
 import java.util.ArrayList;
 
 public class Definition {
-  private String mDefinition;
+  private Word mUserDefinition;
   private static ArrayList<Definition> definitionList = new ArrayList<Definition>();
   private Integer mID;
 
-  public Definition(String definition) {
-    mDefinition = definition;
+  public Definition(Word definition) {
+    mUserDefinition = definition;
     definitionList.add(this);
     mID = definitionList.size();
-    // mUserWord = userWord;
+    mUserDefinition = definition;
   }
 
   public static void clear() {
@@ -21,7 +21,7 @@ public class Definition {
   }
 
   public String getDefinition() {
-    return mDefinition;
+    return mUserDefinition.getUserWord();
   }
 
   public static ArrayList<Definition> getListOfDefinitions() {

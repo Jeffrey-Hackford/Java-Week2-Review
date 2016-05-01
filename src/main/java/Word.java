@@ -5,13 +5,13 @@ public class Word {
   private String mUserWord;
   private static ArrayList<Word> wordList = new ArrayList<Word>();
   private int mID;
-  // private String mDefinition;
+  private String mDefinition;
 
   public Word(String userWord) {
     mUserWord = userWord;
     wordList.add(this);
     mID = wordList.size();
-    // mDefinition = "";
+    mDefinition = "";
   }
 
   public String getUserWord() {
@@ -30,7 +30,7 @@ public class Word {
     wordList.clear();
   }
 
-  // public String getDefinition() {
-  //   return mDefinition;
-  // }
+  public String getDefinition() {
+    return mDefinition;
+  }
 }

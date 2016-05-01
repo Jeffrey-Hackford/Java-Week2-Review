@@ -19,8 +19,19 @@ public class App {
     post("/word-list", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
       String userWord = request.queryParams("userWord");
+      Word newWord = new Word(userWord);
+      request.session().attribute("userWord", newWord);
       model.put("userWord", userWord);
       model.put("template", "templates/word-list.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
+    post("/definition", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      String userDefinition = request.queryParams("userDefinition");
+      model.put("userWord", request.session().attribute("userWord"));
+      model.put("userDefinition", userDefinition);
+      model.put("template", "templates/word-definition-list.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
   }

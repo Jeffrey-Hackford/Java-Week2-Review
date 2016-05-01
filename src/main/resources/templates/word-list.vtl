@@ -1,9 +1,8 @@
 <div class="container">
-  <h1>Your dictionary contains these words:</h1>
-
-  <ul>
-    #foreach ($Word in $wordList)
-   <li><a href="/Word/$Word.getId()">$Word.getUserWord()</a></li>
- #end
-  </ul>
+  <h1 class="jumbotron">Your word has been added! Now enter a definition:</h1>
+    <h3>$userWord</h3>
+      <form action="/definition" method="post">
+        <input id="userDefinition" name="userDefinition" type="text" placeholder="Enter a defintion:">
+        <button type="submit" class="btn btn-info">Add Definition</button>
+    </form>
 </div>
