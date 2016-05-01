@@ -1,0 +1,13 @@
+<h1 class="jumbotron">Your definition has been added!</h1>
+<div>
+  <p>Your added word is: $userWord</p>
+  <p>It's defintion is: $userDefinition</p>
+  <ul>
+    #forEach ($word in $wordList)
+      <ol>$word</ol>
+      <li>$word.getDefinition()</li>
+    #end
+  </ul>
+  <p><a href="/">Add another word</a></p>
+  <p><a href="/words-and-definitions">View all Words</a></p>
+</div>

@@ -9,7 +9,7 @@ public class DefinitionTest {
   }
 
   @Test
-  public void Definition_getListOfDefinitions_String() {
+  public void Definition_getListOfDefinitions_True() {
     Word testWord = new Word("test");
     Word testWord2 = new Word("test2");
     Definition firstDefinition = new Definition (testWord);

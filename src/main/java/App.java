@@ -19,20 +19,28 @@ public class App {
     post("/word-list", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
       String userWord = request.queryParams("userWord");
-      Word newWord = new Word(userWord);
-      request.session().attribute("userWord", newWord);
+      request.session().attribute("userWord", userWord);
       model.put("userWord", userWord);
       model.put("template", "templates/word-list.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    post("/definition", (request, response) -> {
+    post("/success", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
       String userDefinition = request.queryParams("userDefinition");
+      request.session().attribute("userDefinition", userDefinition);
       model.put("userWord", request.session().attribute("userWord"));
       model.put("userDefinition", userDefinition);
-      model.put("template", "templates/word-definition-list.vtl");
+      model.put("template", "templates/success.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
+
+    // get("/words-and-definitions", (request, response) -> {
+    //   Map<String, Object> model = new HashMap<String, Object>();
+    //   model.put("userWord", request.session().attribute("userWord"));
+    //   model.put("userDefinition", request.session().attribute("userDefinition"));
+    //   model.put("template", "templates/words-and-definitions.vtl");
+    //   return new ModelAndView(model, layout);
+    // }, new VelocityTemplateEngine());
   }
 }
